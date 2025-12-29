@@ -28,9 +28,9 @@ This is the official landing page for **RocketRAM**, a feature-rich desktop appl
 
 ### 🔗 Related Links
 
+- **🌐 Live Landing Page**: [rocketram.netlify.app](https://rocketram.netlify.app)
 - **🚀 RocketRAM Application**: [github.com/melloom/RocketRAM](https://github.com/melloom/RocketRAM)
 - **📦 Download Latest Release**: [Releases Page](https://github.com/melloom/RocketRAM/releases)
-- **🌐 Live Landing Page**: (Add your deployed URL here)
 
 ## ✨ Features
 
@@ -61,6 +61,12 @@ This is the official landing page for **RocketRAM**, a feature-rich desktop appl
 - Button ripple effects
 - Smooth scroll navigation
 - Stats counter animations
+
+## 🌐 Live Demo
+
+Visit the live landing page at: **[https://rocketram.netlify.app](https://rocketram.netlify.app)**
+
+The landing page is fully deployed and ready to use!
 
 ## 🖼️ Screenshots
 

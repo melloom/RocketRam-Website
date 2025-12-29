@@ -105,41 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             particles.push(new Particle());
         }
         
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            particles.forEach(particle => {
-                particle.update();
-                particle.draw();
-            });
-            
-            // Draw connections
-            particles.forEach((particle, i) => {
-                particles.slice(i + 1).forEach(otherParticle => {
-                    const dx = particle.x - otherParticle.x;
-                    const dy = particle.y - otherParticle.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (distance < 120) {
-                        ctx.strokeStyle = `rgba(0, 240, 255, ${0.15 * (1 - distance / 120)})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.beginPath();
-                        ctx.moveTo(particle.x, particle.y);
-                        ctx.lineTo(otherParticle.x, otherParticle.y);
-                        ctx.stroke();
-                    }
-                });
-            });
-            
-            requestAnimationFrame(animate);
-        }
-        
         let animationId;
-        function startAnimation() {
-            animate();
-        }
-        
-        // Use requestAnimationFrame throttling for better performance
         let lastTime = 0;
         const throttle = 16; // ~60fps
         
@@ -156,29 +122,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     particle.draw();
                 });
                 
-                // Draw connections (reduced for performance)
-                particles.forEach((particle, i) => {
-                    if (i % 2 === 0) { // Only check every other particle
-                        particles.slice(i + 1).forEach(otherParticle => {
-                            const dx = particle.x - otherParticle.x;
-                            const dy = particle.y - otherParticle.y;
-                            const distance = Math.sqrt(dx * dx + dy * dy);
-                            
-                            if (distance < 120) {
-                                ctx.strokeStyle = `rgba(0, 240, 255, ${0.15 * (1 - distance / 120)})`;
-                                ctx.lineWidth = 0.5;
-                                ctx.beginPath();
-                                ctx.moveTo(particle.x, particle.y);
-                                ctx.lineTo(otherParticle.x, otherParticle.y);
-                                ctx.stroke();
-                            }
-                        });
+                // Draw connections (optimized for performance)
+                for (let i = 0; i < particles.length - 1; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const distanceSq = dx * dx + dy * dy;
+                        
+                        if (distanceSq < 14400) { // 120^2 - using squared distance avoids sqrt
+                            const dist = Math.sqrt(distanceSq);
+                            ctx.strokeStyle = `rgba(0, 240, 255, ${0.12 * (1 - dist / 120)})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
                     }
-                });
+                }
             }
         }
         
-        startAnimation();
+        animate();
         
         // Pause animation when page is not visible
         document.addEventListener('visibilitychange', function() {

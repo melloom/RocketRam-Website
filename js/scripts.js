@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.height = window.innerHeight;
         
         const particles = [];
-        const particleCount = 50;
+        const particleCount = 30; // Reduced for better performance
         
         class Particle {
             constructor() {
@@ -120,8 +120,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     const dy = particle.y - otherParticle.y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     
-                    if (distance < 150) {
-                        ctx.strokeStyle = `rgba(0, 240, 255, ${0.2 * (1 - distance / 150)})`;
+                    if (distance < 120) {
+                        ctx.strokeStyle = `rgba(0, 240, 255, ${0.15 * (1 - distance / 120)})`;
                         ctx.lineWidth = 0.5;
                         ctx.beginPath();
                         ctx.moveTo(particle.x, particle.y);
@@ -134,11 +134,68 @@ document.addEventListener('DOMContentLoaded', function() {
             requestAnimationFrame(animate);
         }
         
-        animate();
+        let animationId;
+        function startAnimation() {
+            animate();
+        }
         
+        // Use requestAnimationFrame throttling for better performance
+        let lastTime = 0;
+        const throttle = 16; // ~60fps
+        
+        function animate() {
+            animationId = requestAnimationFrame(animate);
+            const now = Date.now();
+            if (now - lastTime >= throttle) {
+                lastTime = now;
+                
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+                
+                // Draw connections (reduced for performance)
+                particles.forEach((particle, i) => {
+                    if (i % 2 === 0) { // Only check every other particle
+                        particles.slice(i + 1).forEach(otherParticle => {
+                            const dx = particle.x - otherParticle.x;
+                            const dy = particle.y - otherParticle.y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            
+                            if (distance < 120) {
+                                ctx.strokeStyle = `rgba(0, 240, 255, ${0.15 * (1 - distance / 120)})`;
+                                ctx.lineWidth = 0.5;
+                                ctx.beginPath();
+                                ctx.moveTo(particle.x, particle.y);
+                                ctx.lineTo(otherParticle.x, otherParticle.y);
+                                ctx.stroke();
+                            }
+                        });
+                    }
+                });
+            }
+        }
+        
+        startAnimation();
+        
+        // Pause animation when page is not visible
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                cancelAnimationFrame(animationId);
+            } else {
+                startAnimation();
+            }
+        });
+        
+        let resizeTimeout;
         window.addEventListener('resize', function() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }, 250);
         });
     }
 
@@ -279,18 +336,8 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(rippleStyle);
 
-    // Parallax effect for hero section
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const heroContent = hero.querySelector('.hero-content');
-            if (heroContent && scrolled < window.innerHeight) {
-                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-                heroContent.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
-            }
-        });
-    }
+    // Optimized parallax effect for hero section (removed for better performance)
+    // Parallax removed to improve scroll performance
 
     // Stats counter animation
     const stats = document.querySelectorAll('.stat-number');

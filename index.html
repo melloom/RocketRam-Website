@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>RocketRAM - Supercharge Your PC Performance | Free System Optimizer</title>
+    <meta name="title" content="RocketRAM - Supercharge Your PC Performance | Free System Optimizer">
+    <meta name="description" content="RocketRAM is a free, modern desktop application for real-time system monitoring, advanced process management, antivirus protection, and comprehensive PC optimization. Built with Electron and designed with a sleek cyberpunk-inspired UI. Download for Windows and macOS.">
+    <meta name="keywords" content="RocketRAM, system monitor, PC optimizer, process manager, antivirus, system cleaner, performance tool, Windows optimizer, macOS optimizer, free system tool, RAM monitor, CPU monitor, disk cleaner, system health">
+    <meta name="author" content="RocketRAM">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#00ff88">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://melloom.github.io/RocketRAM/">
+    <meta property="og:title" content="RocketRAM - Supercharge Your PC Performance">
+    <meta property="og:description" content="Free desktop app for real-time system monitoring, process management, antivirus protection, and PC optimization. Available for Windows and macOS.">
+    <meta property="og:image" content="https://melloom.github.io/RocketRAM/og-image.png">
+    <meta property="og:site_name" content="RocketRAM">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://melloom.github.io/RocketRAM/">
+    <meta property="twitter:title" content="RocketRAM - Supercharge Your PC Performance">
+    <meta property="twitter:description" content="Free desktop app for real-time system monitoring, process management, antivirus protection, and PC optimization. Available for Windows and macOS.">
+    <meta property="twitter:image" content="https://melloom.github.io/RocketRAM/og-image.png">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="application-name" content="RocketRAM">
+    <meta name="apple-mobile-web-app-title" content="RocketRAM">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#00ff88">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://melloom.github.io/RocketRAM/">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">RocketRAM</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#requirements">Requirements</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge-top">🚀 The Ultimate PC Performance Tool</div>
+                <h1 class="hero-title">
+                    <span class="title-line">Supercharge Your</span>
+                    <span class="title-line highlight">PC Performance</span>
+                </h1>
+                <p class="hero-subtitle">
+                    RocketRAM is a modern, feature-rich desktop application that provides real-time system monitoring, 
+                    advanced process management, antivirus protection, and comprehensive PC optimization tools. Built with Electron and 
+                    designed with a sleek cyberpunk-inspired UI.
+                </p>
+                <div class="platform-note">
+                    <span class="platform-note-icon">💻</span>
+                    <span><strong>Desktop Only:</strong> This is a computer/desktop application. Mobile version is not available yet.</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#download" class="btn btn-primary">
+                        <span class="btn-icon">⬇️</span>
+                        <span>Download Now</span>
+                        <span class="btn-shine"></span>
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <span class="btn-icon">✨</span>
+                        <span>Explore Features</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">v1.0.1</div>
+                        <div class="stat-label">Latest</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">⚡</div>
+                        <div class="stat-label">Fast</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">🛡️</div>
+                        <div class="stat-label">Secure</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">🦠</div>
+                        <div class="stat-label">Protected</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="glow-effect glow-1"></div>
+            <div class="glow-effect glow-2"></div>
+            <div class="grid-pattern"></div>
+            <canvas id="particle-canvas"></canvas>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Why RocketRAM Section -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title">Why RocketRAM?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Beautiful UI</h3>
+                    <p>Dark theme with neon accents and smooth animations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time Monitoring</h3>
+                    <p>Live CPU, RAM, Disk, and Network stats</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Process Management</h3>
+                    <p>View, search, and terminate processes with ease</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧹</div>
+                    <h3>Smart Cleaning</h3>
+                    <p>Remove junk files and free up disk space</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>System Optimization</h3>
+                    <p>Optimize startup, services, and disk performance</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Auto-Scheduling</h3>
+                    <p>Set up automatic daily/weekly/monthly cleanups</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3>Health Scoring</h3>
+                    <p>Get system health score with actionable recommendations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Notifications</h3>
+                    <p>Stay informed about cleaning and optimization tasks</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Antivirus Protection</h3>
+                    <p>Integrated antivirus scanning and threat detection for your computer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">✨ Features</h2>
+            
+            <div class="feature-category">
+                <h3 class="category-title">📊 Real-Time System Monitoring</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h4>CPU Monitoring</h4>
+                        <ul>
+                            <li>Live CPU usage percentage</li>
+                            <li>Current CPU speed (GHz)</li>
+                            <li>CPU temperature (when available)</li>
+                            <li>Processor name and details</li>
+                            <li>Visual progress bar with glow effects</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Memory (RAM) Monitoring</h4>
+                        <ul>
+                            <li>Real-time memory usage percentage</li>
+                            <li>Used/Total memory in GB</li>
+                            <li>Available memory</li>
+                            <li>Cached memory</li>
+                            <li>Color-coded progress indicators</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Disk Monitoring</h4>
+                        <ul>
+                            <li>Disk usage percentage</li>
+                            <li>Used/Total disk space</li>
+                            <li>Read/Write speeds (MB/s)</li>
+                            <li>I/O performance tracking</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Network Monitoring</h4>
+                        <ul>
+                            <li>Download/Upload speeds</li>
+                            <li>Active network interface</li>
+                            <li>Connection status</li>
+                            <li>Real-time bandwidth usage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-category">
+                <h3 class="category-title">🖱️ Process Management</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h4>Clickable Metric Cards</h4>
+                        <p>Click any metric (CPU, RAM, Disk, Network) to view related processes sorted by usage</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Process Actions</h4>
+                        <p>End individual processes, optimize button to close high-usage processes, confirmation dialogs for safety</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-category">
+                <h3 class="category-title">🧹 Advanced Cleaning System</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h4>Cleaning Options</h4>
+                        <ul class="cleaning-options">
+                            <li>✅ Temp Files</li>
+                            <li>✅ Browser Cache</li>
+                            <li>✅ Recycle Bin</li>
+                            <li>✅ System Logs</li>
+                            <li>✅ Prefetch Files</li>
+                            <li>✅ Thumbnail Cache</li>
+                            <li>✅ DNS Cache</li>
+                            <li>✅ Font Cache</li>
+                            <li>✅ Windows Update Cache</li>
+                            <li>✅ Browser History</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Cleaning Features</h4>
+                        <p>Real-time progress tracking, space freed calculation, files cleaned count, detailed cleaning log</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-category">
+                <h3 class="category-title">🛡️ Antivirus Protection</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h4>Security Features</h4>
+                        <ul>
+                            <li>Real-time threat detection and scanning</li>
+                            <li>Malware and virus protection</li>
+                            <li>Automatic security updates</li>
+                            <li>Quarantine and removal of threats</li>
+                            <li>System health security monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Protection Benefits</h4>
+                        <p>Keep your computer safe from viruses, malware, and other security threats with integrated antivirus protection that works seamlessly with system optimization.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-category">
+                <h3 class="category-title">⚙️ System Optimization</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h4>Optimization Options</h4>
+                        <ul>
+                            <li>✅ Startup Optimization</li>
+                            <li>✅ Services Optimization</li>
+                            <li>✅ Registry Cleanup</li>
+                            <li>✅ Disk Optimization</li>
+                            <li>✅ Memory Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-category">
+                <h3 class="category-title">💯 System Health Score</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <p>Visual circular progress indicator (0-100) with color-coded health status and smart recommendations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots-section">
+        <div class="container">
+            <h2 class="section-title">📸 Screenshots</h2>
+                <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">
+                        <div class="mockup-frame">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="mockup-title">RocketRAM Widget</span>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="mockup-metric">
+                                    <div class="mockup-bar" style="width: 65%"></div>
+                                    <span>CPU: 65%</span>
+                                </div>
+                                <div class="mockup-metric">
+                                    <div class="mockup-bar" style="width: 48%"></div>
+                                    <span>RAM: 48%</span>
+                                </div>
+                                <div class="mockup-metric">
+                                    <div class="mockup-bar" style="width: 32%"></div>
+                                    <span>Disk: 32%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Expanded View: Shows all system metrics with real-time updates</p>
+                </div>
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">
+                        <div class="mockup-frame">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="mockup-title">Process Manager</span>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="mockup-process">
+                                    <div class="mockup-process-bar" style="width: 80%"></div>
+                                    <span>chrome.exe - 45% CPU</span>
+                                </div>
+                                <div class="mockup-process">
+                                    <div class="mockup-process-bar" style="width: 35%"></div>
+                                    <span>code.exe - 23% CPU</span>
+                                </div>
+                                <div class="mockup-process">
+                                    <div class="mockup-process-bar" style="width: 15%"></div>
+                                    <span>explorer.exe - 8% CPU</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Process List: Sorted by usage with search functionality</p>
+                </div>
+                <div class="screenshot-card">
+                    <div class="screenshot-placeholder">
+                        <div class="mockup-frame">
+                            <div class="mockup-header">
+                                <div class="mockup-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="mockup-title">Settings Panel</span>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="mockup-tabs">
+                                    <span class="mockup-tab active">Cleaning</span>
+                                    <span class="mockup-tab">Optimization</span>
+                                    <span class="mockup-tab">Schedule</span>
+                                </div>
+                                <div class="mockup-checkboxes">
+                                    <div class="mockup-check">✓ Temp Files</div>
+                                    <div class="mockup-check">✓ Browser Cache</div>
+                                    <div class="mockup-check">✓ Recycle Bin</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Cleaning, Optimization, Schedule, and Advanced settings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <h2 class="section-title">📦 Download</h2>
+            <div class="download-content">
+                <div class="download-info">
+                    <h3>Get Started with RocketRAM</h3>
+                    <p>Download the latest version and start optimizing your system today!</p>
+                    <p class="platform-note-download">💻 <strong>Note:</strong> This is a desktop/computer application only. Mobile version is not available yet.</p>
+                </div>
+                <div class="download-options">
+                    <div class="download-card download-card-featured">
+                        <div class="download-badge">⭐ Recommended</div>
+                        <div class="download-icon">💾</div>
+                        <h4>Windows Portable</h4>
+                        <p>Latest Version: v1.0.1</p>
+                        <a href="https://github.com/melloom/RocketRAM/releases/download/v1.0.1/WINDOWSPORT-RocketRAM.1.0.1.exe" class="btn btn-download" id="download-btn-windows-portable" download>
+                            <span class="btn-icon">⬇️</span>
+                            <span>Download Portable (.exe)</span>
+                        </a>
+                        <p class="download-note">Single .exe file • No installation needed</p>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">📦</div>
+                        <h4>Windows ZIP</h4>
+                        <p>Latest Version: v1.0.1</p>
+                        <a href="https://github.com/melloom/RocketRAM/releases/download/v1.0.1/RocketRAM-1.0.1-win.zip" class="btn btn-download" id="download-btn-windows-zip" download>
+                            <span class="btn-icon">⬇️</span>
+                            <span>Download ZIP Archive</span>
+                        </a>
+                        <p class="download-note">Extract and run • Portable version</p>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">🍎</div>
+                        <h4>macOS Portable (DMG)</h4>
+                        <p>Latest Version: v1.0.1</p>
+                        <a href="https://github.com/melloom/RocketRAM/releases/download/v1.0.1/MACPORT-RocketRAM-1.0.1-arm64.dmg" class="btn btn-download btn-download-mac" id="download-btn-mac" download>
+                            <span class="btn-icon">⬇️</span>
+                            <span>Download Portable (.dmg)</span>
+                        </a>
+                        <p class="download-note">macOS (ARM64) • Drag to Applications</p>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">📦</div>
+                        <h4>macOS ZIP</h4>
+                        <p>Latest Version: v1.0.1</p>
+                        <a href="https://github.com/melloom/RocketRAM/releases/download/v1.0.1/RocketRAM-1.0.1-arm64-mac.zip" class="btn btn-download btn-download-mac" id="download-btn-mac-zip" download>
+                            <span class="btn-icon">⬇️</span>
+                            <span>Download ZIP Archive</span>
+                        </a>
+                        <p class="download-note">Extract and run • macOS (ARM64)</p>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">📋</div>
+                        <h4>Source Code</h4>
+                        <p>View on GitHub</p>
+                        <a href="https://github.com/melloom/RocketRAM/releases" class="btn btn-secondary" target="_blank">
+                            <span class="btn-icon">📁</span>
+                            <span>View All Releases</span>
+                        </a>
+                        <p class="download-note">View changelog & all versions</p>
+                    </div>
+                </div>
+                <div class="install-steps">
+                    <h3>Installation Steps</h3>
+                    <div class="install-steps-content">
+                        <div class="install-platform">
+                            <h4>🪟 Windows</h4>
+                            <div class="install-version">
+                                <strong>Portable (.exe):</strong>
+                                <ol>
+                                    <li>Download the portable .exe file (recommended)</li>
+                                    <li>Run RocketRAM.exe directly (no installation needed!)</li>
+                                    <li>Enjoy optimized performance!</li>
+                                </ol>
+                            </div>
+                            <div class="install-version">
+                                <strong>ZIP Archive:</strong>
+                                <ol>
+                                    <li>Download the ZIP archive</li>
+                                    <li>Extract to a folder</li>
+                                    <li>Run RocketRAM.exe from the extracted folder</li>
+                                    <li>Enjoy optimized performance!</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="install-platform">
+                            <h4>🍎 macOS</h4>
+                            <div class="install-version">
+                                <strong>Portable (.dmg):</strong>
+                                <ol>
+                                    <li>Download the DMG file</li>
+                                    <li>Open the DMG file</li>
+                                    <li>Drag RocketRAM to Applications</li>
+                                    <li>Launch from Applications folder</li>
+                                </ol>
+                            </div>
+                            <div class="install-version">
+                                <strong>ZIP Archive:</strong>
+                                <ol>
+                                    <li>Download the ZIP archive</li>
+                                    <li>Extract the ZIP file</li>
+                                    <li>Move RocketRAM.app to Applications folder</li>
+                                    <li>Launch from Applications folder</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Requirements Section -->
+    <section id="requirements" class="requirements-section">
+        <div class="container">
+            <h2 class="section-title">💻 System Requirements</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h3>Minimum Requirements</h3>
+                    <ul>
+                        <li><strong>OS:</strong> Windows 10/11 (64-bit) or macOS (ARM64)</li>
+                        <li><strong>RAM:</strong> 2 GB</li>
+                        <li><strong>Disk Space:</strong> 200 MB</li>
+                        <li><strong>Node.js:</strong> v16.0.0+ (if building from source)</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h3>Recommended Requirements</h3>
+                    <ul>
+                        <li><strong>OS:</strong> Windows 11 or macOS (latest)</li>
+                        <li><strong>RAM:</strong> 4 GB or more</li>
+                        <li><strong>Disk Space:</strong> 500 MB</li>
+                        <li><strong>Node.js:</strong> v18.0.0+ (if building from source)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="permissions-note">
+                <p><strong>Note:</strong> Some features may require Administrator rights for registry cleanup, service optimization, and disk defragmentation.</p>
+            </div>
+            <div class="platform-note-download" style="max-width: 900px; margin: 2rem auto 0;">
+                <p style="margin: 0;">💻 <strong>Desktop Application Only:</strong> RocketRAM is designed for desktop computers (Windows and macOS). Mobile version is not available yet as this is currently a computer project application.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🚀</span>
+                    <span class="logo-text">RocketRAM</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#download">Download</a>
+                    <a href="#requirements">Requirements</a>
+                    <a href="https://github.com/melloom/RocketRAM" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ for everyone | <a href="https://github.com/melloom/RocketRAM/blob/main/LICENSE" target="_blank">MIT License</a></p>
+                <p class="footer-note">⭐ Star this repo if you find it useful! ⭐</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+

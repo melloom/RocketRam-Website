@@ -1,0 +1,19 @@
+{
+  "name": "rocketram-website",
+  "version": "1.0.1",
+  "description": "RocketRAM - Modern desktop app website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 8080 -o",
+    "start": "npx http-server -p 8080 -o",
+    "serve": "npx http-server -p 8080"
+  },
+  "keywords": [
+    "rocketram",
+    "website",
+    "desktop-app"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
